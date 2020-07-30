@@ -1,6 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
+from django.contrib.auth.models import Group, User
+
 from app.models import Customer, Order
 
 
@@ -13,3 +15,6 @@ class CustomerAdmin(admin.ModelAdmin):
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Order._meta.fields]
+
+admin.site.unregister(User)
+admin.site.unregister(Group)

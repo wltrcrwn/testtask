@@ -5,7 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<a href="{% url 'customers' %}">Список користувачів</a>
-<a href="{% url 'customers' %}">Список користувачів</a>
+<style>
+    a {
+        display: block;
+        font-size: 18px;
+        padding: 6px 20px;
+    }
+    a:hover {
+
+    }
+</style>
+<a style="display: block" href="{% url 'customers' %}">Весь список користувачів</a>
+<a href="{% url 'customers' %}?date=2018-05-09">Список користувачів з фільтром 2018-05-09</a>
 </body>
 </html>

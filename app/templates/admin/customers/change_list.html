@@ -43,8 +43,7 @@
     <div id="content-main">
         <form action="{% url 'import_customers' %}" method="POST">
             <input name="file" id="import_csv" type="file">
-
-            <button type="submit">Надіслати</button>
+            <button type="submit">Імпортувати</button>
         </form>
         {% block object-tools %}
             <ul class="object-tools">
