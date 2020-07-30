@@ -17,10 +17,10 @@ def import_customers(request):
                 q = q.replace('\n', '').split(',')
                 d1 = DT.datetime.strptime(q[2], '%Y/%m/%d').date()
                 d2 = DT.datetime.strptime(q[3], '%Y/%m/%d').date()
-                Customer.objects.update_or_create(first_name=q[0],
-                                                  last_name=q[1],
-                                                  defaults={'date_of_birth': d1,
-                                                            'register_date': d2}
-                                                  )
+                Customer.objects.create(first_name=q[0],
+                                        last_name=q[1],
+                                        date_of_birth=d1,
+                                        register_date=d2
+                                        )
     finally:
         return redirect(reverse('admin:%s_%s_%s' % ('app', 'customer', 'changelist')))
