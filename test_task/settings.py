@@ -24,7 +24,7 @@ SECRET_KEY = 'wng-2viy$3=n+-3deufada(2jtm-x^4d1=%pugu2_3b8f*bz0l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
